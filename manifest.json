@@ -9,6 +9,11 @@
     "content_scripts": [{
       "js": ["script.js"],
       "matches": ["https://moodle.iitd.ac.in/login/index.php"]
-    }],
+    },
+    {
+      "js": ["webmail.js"],
+      "matches": ["https://webmail.iitd.ernet.in/roundcube/*"]
+    }
+  ],
     "manifest_version": 2
   }
