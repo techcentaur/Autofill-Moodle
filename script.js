@@ -29,10 +29,10 @@ else if(text.search("Please enter first")===n){
 	console.log("[*] first value is : " + array[6]);
 	captchval = parseInt(array[6]);
 }
-else if(text.search("Please emter second")===n){
+else if(text.search("Please enter second")===n){
 	console.log("[*][*] Logical evaluation detected ");
-	console.log("[*] second value is : " + array[10]);
-	captchval = parseInt(array[10]);
+	console.log("[*] second value is : " + array[8]);
+	captchval = parseInt(array[8]);
 }
 
 
@@ -42,3 +42,14 @@ var delay = 500;
 setTimeout(function() {
  document.getElementById("valuepkg3").value = captchval;
 }, delay);
+console.log("[*][*] Captcha Filled Successfully")
+
+// // Filling username and password
+
+// console.log(" ");
+// console.log("[/][/] Filling Username and Password")
+
+// var my = JSON.parse("config");
+
+// document.getElementById("username").value = my[0].user;
+// document.getElementById("password").value = my[1].pass;
