@@ -1,0 +1,44 @@
+var text = document.body.textContent;
+console.log("[*][*] Autofill Moodle Running...")
+var n = text.search("Please ");
+var str = text.substring(n, n+42);
+
+console.log("[*][*] Captcha Rendered");
+console.log(str);
+
+var array = str.split(' ');
+
+var captchval;
+
+if(text.search("Please add")===n){
+	console.log("[*][*] Addition operation detected ");
+	console.log("[*] operator 1 is : " + array[4]);
+	console.log("[*] operator 2 is: " + array[6]);
+	captchval = parseInt(array[4]) + parseInt(array[6]);
+	console.log("[*] Addition result is: " + captchval);
+}
+else if(text.search("Please subtract")===n){
+	console.log("[*][*] Subtraction operation detected ");
+	console.log("[*] operator 1 is : " + array[4]);
+	console.log("[*] operator 2 is: " + array[6]);
+	captchval = parseInt(array[4]) - parseInt(array[6]);
+	console.log("[*] Subtraction result is: " + captchval);
+}
+else if(text.search("Please enter first")===n){
+	console.log("[*][*] Logical evaluation detected ");
+	console.log("[*] first value is : " + array[6]);
+	captchval = parseInt(array[6]);
+}
+else if(text.search("Please emter second")===n){
+	console.log("[*][*] Logical evaluation detected ");
+	console.log("[*] second value is : " + array[10]);
+	captchval = parseInt(array[10]);
+}
+
+
+console.log("[*][*] Filling captcha value...")
+
+var delay = 500;
+setTimeout(function() {
+ document.getElementById("valuepkg3").value = captchval;
+}, delay);
