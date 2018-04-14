@@ -1,0 +1,14 @@
+ {
+    "name": "Autofill Moodle Captcha",
+    "version": "1.0",
+    "description": "It autofills moodle captcha and saved ID and password",
+    "background": {
+      "scripts": ["script.js"],
+      "persistent": false
+    },
+    "content_scripts": [{
+      "js": ["script.js"],
+      "matches": ["https://moodle.iitd.ac.in/login/index.php"]
+    }],
+    "manifest_version": 2
+  }
