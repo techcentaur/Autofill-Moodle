@@ -1,3 +1,10 @@
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+
 var text = document.body.textContent;
 console.log("[*][*] Autofill Moodle Running...")
 var n = text.search("Please ");
